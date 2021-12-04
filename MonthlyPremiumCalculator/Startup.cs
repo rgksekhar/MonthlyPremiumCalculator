@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MonthlyPremiumCalculatorServices.Repository;
+using MonthlyPremiumCalculatorServices.Services;
 
 namespace MonthlyPremiumCalculator
 {
@@ -28,6 +29,10 @@ namespace MonthlyPremiumCalculator
             {
                 configuration.RootPath = "ClientApp/build";
             });
+            services.AddSingleton<IOccupationRepository, OccupationRepository>()
+                    .AddSingleton<ICalculatePremiumRepository, CalculatePremiumRepository>()
+                    .AddSingleton<IPremiumCalculatorService, PremiumCalculatorService>()
+                    .AddSingleton<IOccupationService, OccupationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
