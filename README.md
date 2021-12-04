@@ -1,1 +1,1 @@
-# MonthlyPremiumCalculator Application
+# Monthly Premium Calculator Application
