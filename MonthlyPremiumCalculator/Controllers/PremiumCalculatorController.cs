@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Logging;
 using MonthlyPremiumCalculatorDtos;
 using MonthlyPremiumCalculatorServices.Services;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
@@ -24,10 +23,7 @@ namespace MonthlyPremiumCalculator.Controllers
         [HttpPost]
         public async Task<IActionResult> CalculatePremium([FromBody][Required] PremiumCalculatorDtos request)
         {
-
-                    var s = await _premiumCalculatorService.CalculatePremium(request);
-                    return Ok(s);
-               
+            return Ok(await _premiumCalculatorService.CalculatePremium(request));               
         }
     }
 }

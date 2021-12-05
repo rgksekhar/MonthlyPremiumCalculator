@@ -7,11 +7,11 @@ namespace MonthlyPremiumCalculatorServices.Services
 {
     public class PremiumCalculatorService : IPremiumCalculatorService
     {
-        private readonly ILogger<OccupationService> _logger;
+        private readonly ILogger<PremiumCalculatorService> _logger;
         private readonly ICalculatePremiumRepository _calculatePremiumRepository;
         private readonly IOccupationRepository _occupationRepository;
 
-        public PremiumCalculatorService(ICalculatePremiumRepository calculatePremiumRepository, IOccupationRepository occupationRepository, ILogger<OccupationService> logger)
+        public PremiumCalculatorService(ICalculatePremiumRepository calculatePremiumRepository, IOccupationRepository occupationRepository, ILogger<PremiumCalculatorService> logger)
         {
             _logger = logger;
             _calculatePremiumRepository = calculatePremiumRepository;

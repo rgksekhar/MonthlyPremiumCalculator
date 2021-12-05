@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MonthlyPremiumCalculatorServices.Services;
-using System;
 using System.Threading.Tasks;
 
 namespace MonthlyPremiumCalculator.Controllers
@@ -22,18 +21,7 @@ namespace MonthlyPremiumCalculator.Controllers
         [HttpGet]
         public async Task<IActionResult> GetOccupationList()
         {
-            try
-            {
-                var occupationList = await _occupationService.GetOccupations();
-
-                return Ok(occupationList);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Something went wrong in GetoccupationList : {ex}");
-
-                return StatusCode(500, value: "Internal server error");
-            }
+            return Ok(await _occupationService.GetOccupations());
         }
     }
 }

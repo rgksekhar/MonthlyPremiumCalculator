@@ -14,3 +14,9 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+.heading{
+    font-family:Verdana;
+    font-size:2rem;
+    text-align:center;
+    margin-bottom:18px;
+}

@@ -21,6 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\components\NavMenu.css" />
+    <None Remove="ClientApp\src\components\NavMenu.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MonthlyPremiumCalculatorServices\MonthlyPremiumCalculatorServices.csproj" />
   </ItemGroup>
 

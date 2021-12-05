@@ -15,7 +15,6 @@ namespace MonthlyPremiumCalculatorServices.Services
             _logger = logger;
             _occupationRepository = occupationRepository;
         }
-
         public async Task<IEnumerable<string>> GetOccupations()
         {
             return await _occupationRepository.GetOccupations();
