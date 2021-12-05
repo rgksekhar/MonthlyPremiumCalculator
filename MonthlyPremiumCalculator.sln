@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlyPremiumCalculatorDto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlyPremiumCalculatorServices", "MonthlyPremiumCalculatorServices\MonthlyPremiumCalculatorServices.csproj", "{021B5DFA-8AD1-42C7-8981-A3D98E76D90C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlyPremiumCalculator.UnitTests", "MonthlyPremiumCalculator.UnitTests\MonthlyPremiumCalculator.UnitTests.csproj", "{2716AE6D-3802-4A72-BFC5-2C44679A90B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{021B5DFA-8AD1-42C7-8981-A3D98E76D90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021B5DFA-8AD1-42C7-8981-A3D98E76D90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021B5DFA-8AD1-42C7-8981-A3D98E76D90C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2716AE6D-3802-4A72-BFC5-2C44679A90B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2716AE6D-3802-4A72-BFC5-2C44679A90B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2716AE6D-3802-4A72-BFC5-2C44679A90B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2716AE6D-3802-4A72-BFC5-2C44679A90B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
