@@ -9,7 +9,6 @@ using NUnit.Framework;
 
 namespace MonthlyPremiumCalculator.UnitTests
 {
-
     [TestFixture]
     public class OccupationControllerTests
     {
