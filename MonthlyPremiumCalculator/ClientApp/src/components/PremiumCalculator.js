@@ -17,8 +17,8 @@ export class PremiumCalculator extends Component {
     }
 
     CalculatePremium = async event => {
-        const { name, errMsg, forecasts, loading, occupations, premiumAmount, age, occupation,
-            sumInsured, ageError, dob } = this.state;
+
+        const { name, age, sumInsured, dob } = this.state;
 
         let formErrors = {};
         let formIsValid = true;
@@ -48,6 +48,7 @@ export class PremiumCalculator extends Component {
             formIsValid = false;
             formErrors["ageErrorMessage"] = "Please enter your age between 0 and 100";
         }
+
         this.setState({ premiumAmount: 0, loading: false });
         this.setState({ formErrors: formErrors });     
 
@@ -97,7 +98,7 @@ export class PremiumCalculator extends Component {
     }
 
     render() {
-        const { nameErr, ageErr, dobErr, sumInsuredErr, ageErrorMessage } = this.state.formErrors;
+        const { nameErr, ageErr, dobErr, sumInsuredErr } = this.state.formErrors;
         return (
             <div className = "container">
                 <div className = "heading"> Monthly Premium Calculator</div>
@@ -140,9 +141,9 @@ export class PremiumCalculator extends Component {
                             name = "age"
                             type = "number" maxLength = "3"
                             placeholder = "Your Age.."
-                            onKeyPress = {(e) => this.ageHandler(e.target.value)}
-                            onChange = {(e) => this.handleChange(e)}
-                            value = {this.state.age} />
+                            onKeyPress = { (e) => this.ageHandler(e.target.value) }
+                            onChange = { (e) => this.handleChange(e) }
+                            value = { this.state.age } />
 
                         {
                             this.state.age.length < 1 && this.state.errMsg ?
@@ -166,13 +167,11 @@ export class PremiumCalculator extends Component {
                 <div className = "row pt-2" >
                     <div className = "col-sm-4" >
                         <label className = {"labelDiv"}>
-
                             Date <span className = "mandatory" >*
                             </span>
                         </label ></div >
 
                     <div className = "col-sm-4">
-
                         <input                           
                             className = "inputDiv"
                             name = "dob"
@@ -193,11 +192,11 @@ export class PremiumCalculator extends Component {
                         <label className = {"labelDiv"} >
                             Sum Insured <span className = "mandatory">*
                             </span>
-
-                        </label></div >
+                        </label>
+                    </div >
                     <div className = "col-sm-4" >
-                        <input className="inputDiv"
-                            name="sumInsured"
+                        <input className = "inputDiv"
+                            name = "sumInsured"
                             type = "number"
                             placeholder = "Sum Insured.."
                             onChange = {(e) => this.handleChange(e)}
@@ -220,7 +219,7 @@ export class PremiumCalculator extends Component {
                             <select
                                 className = "inputDiv"
                                 name = "list"
-                                id="list"
+                                id = "list"
                                 onChange={this.CalculatePremium}>
                                 {
                                         this.state.occupations.map((value, index) => (
@@ -251,7 +250,7 @@ export class PremiumCalculator extends Component {
                             className = "btn-primary"
                             type = "button"
                             value = "Reset"
-                            onClick={() => { this.resetFields() }} />
+                            onClick = {() => { this.resetFields() }} />
                     </div>
                 </div >
             </div>
