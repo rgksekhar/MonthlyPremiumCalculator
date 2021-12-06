@@ -37,7 +37,7 @@ namespace MonthlyPremiumCalculator.UnitTests
 
             var result = await _premiumCalculatorService.CalculatePremium(request);
 
-            Assert.AreEqual(1, result);
+            Assert.AreEqual(100m, result);
         }
     }
 }
